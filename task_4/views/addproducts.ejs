@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Додати новий продукт</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f0f0f0;
+      }
+
+      header {
+        background-color: #333;
+        color: white;
+        padding: 15px;
+        text-align: center;
+      }
+
+      .container {
+        max-width: 600px;
+        margin: 40px auto;
+        background-color: white;
+        padding: 20px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+      }
+
+      h2 {
+        text-align: center;
+        margin-bottom: 20px;
+        color: #333;
+      }
+
+      form {
+        display: flex;
+        flex-direction: column;
+      }
+
+      label {
+        margin-bottom: 5px;
+        font-weight: bold;
+      }
+
+      input,
+      textarea,
+      select {
+        padding: 10px;
+        margin-bottom: 20px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        font-size: 16px;
+      }
+
+      input[type="file"] {
+        padding: 3px;
+      }
+
+      button {
+        padding: 10px 15px;
+        background-color: #28a745;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 18px;
+      }
+
+      button:hover {
+        background-color: #218838;
+      }
+
+      footer {
+        text-align: center;
+        padding: 10px;
+        background-color: #333;
+        color: white;
+        margin-top: 40px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Додати новий продукт</h1>
+    </header>
+
+    <div class="container">
+      <h2>Форма для додавання продукту</h2>
+      <form action="#" method="post">
+        <label for="product-name">Назва продукту:</label>
+        <input
+          type="text"
+          id="product-name"
+          name="product-name"
+          placeholder="Введіть назву продукту"
+          required
+        />
+
+        <label for="product-description">Опис продукту:</label>
+        <textarea
+          id="product-description"
+          name="product-description"
+          rows="4"
+          placeholder="Введіть опис продукту"
+          required
+        ></textarea>
+
+        <label for="product-price">Ціна продукту (грн):</label>
+        <input
+          type="number"
+          id="product-price"
+          name="product-price"
+          placeholder="Введіть ціну продукту"
+          required
+        />
+
+        <label for="product-category">Категорія:</label>
+        <select id="product-category" name="product-category">
+          <option value="electronics">Електроніка</option>
+          <option value="clothing">Одяг</option>
+          <option value="accessories">Аксесуари</option>
+          <option value="furniture">Меблі</option>
+          <option value="toys">Іграшки</option>
+        </select>
+
+        <label for="product-image">Зображення продукту:</label>
+        <input
+          type="file"
+          id="product-image"
+          name="product-image"
+          accept="image/*"
+          required
+        />
+
+        <button type="submit">Додати продукт</button>
+      </form>
+    </div>
+
+    <footer>
+      <p>&copy; 2024 Інтернет Магазин</p>
+    </footer>
+  </body>
+</html>
